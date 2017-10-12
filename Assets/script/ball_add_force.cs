@@ -10,7 +10,7 @@ public class ball_add_force : MonoBehaviour {
     void Start () {
 
         rb = GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(-10.0f, 0.0f, 15.0f * Random.value + 10.0f);
+        // rb.velocity = new Vector3(-10.0f, 0.0f, 15.0f * Random.value + 10.0f);
         Debug.Log(rb.velocity);
     }
 	
