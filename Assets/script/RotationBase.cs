@@ -18,7 +18,7 @@ public class RotationBase : MonoBehaviour {
             
             transform.rotation.Set(0,0,0,0);
             Rigidbody rigidbody = GetComponent<Rigidbody>();
-            rigidbody.AddTorque(Vector3.up*5000.0f);
+            rigidbody.AddTorque(Vector3.up*-5000.0f);
         }
     }
 
