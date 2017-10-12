@@ -13,7 +13,11 @@ public class rotation : MonoBehaviour {
 	
 	
 	void Update () {
-        tr.Rotate(0, 2f, 0);
+        rotation_roulette();
        
+    }
+
+    void rotation_roulette () {
+        tr.Rotate(0, 2f, 0);
     }
 }
