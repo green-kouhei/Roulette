@@ -16,9 +16,9 @@ public class RotationBase : MonoBehaviour {
     public void Rotation() {
         if (Input.GetKeyDown(KeyCode.Space)){
             
-            transform.rotation.Set(0,0,0,0);
+            //transform.rotation.Set(0,0,0,0);
             Rigidbody rigidbody = GetComponent<Rigidbody>();
-            rigidbody.AddTorque(Vector3.up*-5000.0f);
+            rigidbody.AddTorque(Vector3.up*5000.0f);
         }
     }
 

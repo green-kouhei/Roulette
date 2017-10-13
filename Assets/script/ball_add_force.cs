@@ -13,7 +13,7 @@ public class ball_add_force : MonoBehaviour {
             
             GameObject newball = Instantiate(ball,new Vector3(10.7f,2.3f,-2.3f),Quaternion.identity);
 			Vector3 force = newball.transform.forward * speed;
-            newball.GetComponent<Rigidbody>().AddForce(force);
+            newball.GetComponent<Rigidbody>().AddForce(force* (Random.value*0.3f+0.7f));
 
 
         // Destroy(ball);

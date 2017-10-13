@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetCamera : MonoBehaviour {
-    public GameObject m_target;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +10,8 @@ public class TargetCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(m_target.transform);
+        GameObject ball = GameObject.Find("golden_ball" + "(Clone)");
+        if(ball != null)
+            transform.LookAt(ball.transform);
     }
 }

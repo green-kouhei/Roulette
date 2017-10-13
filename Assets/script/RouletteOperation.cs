@@ -12,9 +12,14 @@ public class RouletteOperation : MonoBehaviour {
 		ball_add_force baf = ball.GetComponent<ball_add_force>();
 
         if (Input.GetKeyDown(KeyCode.Space)){
-           rb.Rotation();
-		   baf.add_force();
-
+            GameObject ball = GameObject.Find("golden_ball" + "(Clone)");
+            if(ball != null)
+            {
+                Destroy(ball);
+            }
+            rb.Rotation();
+		    baf.add_force();
+        
         }
 	}
 
