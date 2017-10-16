@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class NumberText : MonoBehaviour {
+    private float mTimeElapsed;
+    private int mLastIndex = -2;
+    private bool mFlag = false;
+    private string mNum="";
+
     int[] NUMBERS = { -1, 27, 10, 25, 29, 12, 8, 19, 31, 18, 6, 21, 33, 16, 4, 23, 35, 14, 2, 0, 28, 9, 26, 30, 11, 7, 20, 32, 17, 5, 22, 34, 15, 3, 24, 36, 13, 1 };
     // Use this for initialization
     void Start() {
@@ -13,10 +18,29 @@ public class NumberText : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         int index = getSpotIndex();
-        if (index >= 0 && index < 38) { 
-        Text text = GetComponent<Text>();
-        text.text = NUMBERS[index].ToString();
+
+        if(index != mLastIndex)
+        {
+            mTimeElapsed = 0;
+            mLastIndex = index;
+            mFlag = true;
+            mNum = "-";
         }
+        else 
+        {
+            mTimeElapsed += Time.deltaTime;
+            if(mTimeElapsed > 2.0f && mFlag)
+            {
+                if (index >= 0 && index < 38)
+                {
+                    mNum = NUMBERS[index].ToString();
+                    mFlag = false;
+                }
+            }
+        }
+        Text text = GetComponent<Text>();
+        text.text = mNum;
+
     }
     int getSpotIndex()
     {
