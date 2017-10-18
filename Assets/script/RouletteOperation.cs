@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RouletteOperation : MonoBehaviour {
-    public float speed = 2000.0f;
+    public float speed = 1500.0f;
     public GameObject rotationBase;
 	public GameObject ball;
 
