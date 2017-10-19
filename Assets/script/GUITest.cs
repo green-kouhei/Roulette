@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class GUITest : MonoBehaviour {
     public GUIStyle headerStyle; //ここのパラメータで背景の枠を変更可能
     public GUIStyle numberStyle;
-    public int[] numbers = new int[9];
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public string[] numbers = new string[9];
+
+	public void setNumber(string num)
+    {
+        for (int i = numbers.Length - 2; i >= 0; i--)
+            numbers[i + 1] = numbers[i];
+        numbers[0] = num;
+    }
+
     void OnGUI()
     {
         //位置計算
@@ -27,6 +28,7 @@ public class GUITest : MonoBehaviour {
             numberStyle.normal.textColor = new Color(1.0f, 0.0f, 0.0f);//色はこんな感じで変更可能
             GUI.Box(new Rect((width + 1) * i,y+ height+1, width, height), numbers[i].ToString(), numberStyle);
         }
-        
+
     }
+    
 }
