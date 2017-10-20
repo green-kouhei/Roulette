@@ -495,7 +495,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1301679414064550, guid: 0284fb045be21461ebf295f90da58e33, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 54174568727361826, guid: 0284fb045be21461ebf295f90da58e33,
         type: 2}
@@ -534,6 +534,10 @@ Prefab:
     - target: {fileID: 4787361510186910, guid: 0284fb045be21461ebf295f90da58e33, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301679414064550, guid: 0284fb045be21461ebf295f90da58e33, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114795003386202876, guid: 0284fb045be21461ebf295f90da58e33, type: 2}
@@ -718,11 +722,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2567c3e41b7391942873e9e1310d983a, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &1189368437 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1301679414064550, guid: 0284fb045be21461ebf295f90da58e33,
-    type: 2}
-  m_PrefabInternal: {fileID: 1062152435}
 --- !u!1 &1369313542 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100010, guid: 2567c3e41b7391942873e9e1310d983a, type: 3}
@@ -769,8 +768,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2000
-  rotationBase: {fileID: 931185908}
-  ball: {fileID: 1189368437}
 --- !u!4 &1454128035
 Transform:
   m_ObjectHideFlags: 0
