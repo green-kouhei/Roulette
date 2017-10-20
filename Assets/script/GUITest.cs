@@ -18,12 +18,13 @@ public class GUITest : MonoBehaviour {
 
     void OnGUI()
     {
-        //位置計算
-        int y = Screen.height-33*2;
+
         //枠の大きさ
         int width = 64;
-        int height = 32;
-        for(int i=0;i<numbers.Length; i++)
+        int height = 64;
+        //位置計算
+        int y = Screen.height- (height+1) * 2;
+        for (int i=0;i<numbers.Length; i++)
         {
             GUI.Box(new Rect((width + 1) * i,y, width, height), (i + 1).ToString(), headerStyle);
             numberStyle.normal.textColor = co[i];//色はこんな感じで変更可能
