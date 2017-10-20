@@ -61,7 +61,7 @@ public class RouletteOperation : MonoBehaviour {
                 {
                     mNum = NUMBERS[index].ToString();
                     mFlag = false;
-                    guiTest.setNumber(mNum);
+                    guiTest.printRireki(mNum);
                 }
             }
         }
