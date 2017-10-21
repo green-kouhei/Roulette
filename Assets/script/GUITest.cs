@@ -66,10 +66,13 @@ public class GUITest : MonoBehaviour {
 
         }
         
+    
 
     }
 
-
+    public void reset() {
+        numbers = new string[9];
+    }
 
 
     }
