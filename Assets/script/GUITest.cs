@@ -11,7 +11,13 @@ public class GUITest : MonoBehaviour {
     static Color White = new Color(255f / 255f, 255f / 255f, 255f / 255f);
     string[] RedNum = { "1", "3", "5", "7", "9", "12", "14", "16", "18", "21", "23", "25", "27", "30", "32", "34", "36" };
     Color[] co = { Brack, Brack, Brack, Brack, Brack, Brack, Brack, Brack, Brack };
+     private AudioSource[] sources;
 
+    void Start()
+    {
+        // BGM
+        sources = gameObject.GetComponents<AudioSource>();
+    }
 
 
     void OnGUI()
@@ -33,6 +39,12 @@ public class GUITest : MonoBehaviour {
 
     public void printRireki(string num)
     {
+
+        for (int i = 0; i < sources.Length; i++)
+        {
+            sources[i].Play();
+        }
+
         for (int i = numbers.Length-1;i>0;i--)
         {
             numbers[i] = numbers[i - 1];
