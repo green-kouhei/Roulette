@@ -25,10 +25,11 @@ public class RouletteOperation : MonoBehaviour {
     
     void Update () {
 
-        if (Input.GetKeyDown(KeyCode.R)){
+                if (Input.GetKeyDown(KeyCode.R)){
             Debug.Log("reset");
             guiTest.reset();
         }
+
 
         if (Input.GetKeyDown(KeyCode.Space)){
             //ルーレット回転処理
